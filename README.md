@@ -22,6 +22,14 @@ It is recommended to add your variables in a `terraform.tfvars` file so that it'
 | `rds_instance_class` | `string` | `db.t3.micro` | no |
 | `log_retention` | `string` | `7` | no |
 
+# Outputs
+
+| Output name | Description |
+| ----------- | ----------- |
+| `rds_hostname` | The RDS hostname provisioned - useful to add in db secrets later on. |
+| `vpc_id` | The VPC ID |
+| `alb_dns` | The provisioned ALB DNS name|
+
 # Disclaimer
 
 This is not spinning up a complete Chainlink node. Instead, this project should help you deploy the basic infrastructure which you will need in order to deploy a scalable and highly-available (HA) Chainlink node. This shall not be used in production environments without prior consideration of the risks involved, as well as security enhancements (eg. running everything in private subnets instead of public ones).
